@@ -1,0 +1,114 @@
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>BLOG</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="./js/index.js"></script>
+    </head>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <style>
+    .headerNav{
+        background-color:darksalmon;
+        position: sticky;
+        height: 3em;
+    }
+    .navi1{
+        padding: 10px;
+        padding-left: 2em;
+    
+    }
+    .navi2{
+        float:right;
+        margin-right: 2em;
+    }
+    .profile,.works{
+        width: 300px;
+        height: 300px;
+        margin-top:8em ;
+    }
+
+    .contents{
+        display: flex;
+        justify-content: space-around;
+    }
+    .box1{
+        position:relative;
+        top:-40px;
+        left:60px;
+        background-color:bisque;
+        width: 180px;
+        height: 90px;
+        z-index: 1;
+        text-align: center;
+    }
+    .box2{
+        position:relative;
+        top:-40px;
+        left:60px;
+        background-color:powderblue;
+        width: 180px;
+        height: 90px;
+        z-index: 1;
+        text-align: center;
+    }
+    img{
+        z-index: -1;
+    }
+    a{
+        margin-right:5px;
+        font-family: 'Raleway', sans-serif;
+    }
+    footer{
+        float:inline-end;
+        background-color: darkgrey;
+        margin-top: 50px;
+        height: 3em;
+        display: flex;
+        justify-content: center;
+    }
+
+    </style>
+    <body>
+        <header>
+    <nav class="headerNav">
+        <span class="navi1">
+            <a href="/">HOME</a>
+            <a href="info.htm">INFO</a>
+            <a href="works.htm">WORKS</a>
+        </span>
+        <span style="clear: both;" class="navi2">
+            <img src="../image/github.png"/ onclick="location.href='http://www.github.com/jfmam'">
+        </span>
+    </nav>
+    </header>
+    <section>
+        <div class="contents">
+            <span>
+                <img onclick="location.href='info.htm'" onmouseover="MouseIn(this)" onmouseout="MouseOut(this)" class="profile" src="image/profile.jpg">
+                <div class="box1">
+                    <h3>Introduce</h3>
+                    <p>Blog's master</p>
+                </div>
+            </span>
+            <span>
+                <img class="works" onmouseover="MouseIn(this)" onmouseout="MouseOut(this)" src="image/works.PNG">
+                <div class="box2">
+                    <h3>Works!</h3>
+                    <p>My Repositary</p>
+                </div>
+            </span>
+        </div>
+    </section>
+
+    <footer style="clear: both;">
+        <p>2020 by seung</p>
+    </footer>
+
+    </body>
+
+    </html>
+
