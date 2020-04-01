@@ -15,21 +15,7 @@ table.style.border='1px solid'
 table.style.width='300px'
 table.style.height = '300px'
 
- function check(col,row,turn){
-     let col1=col;
-     let row1=row;
-     let turn1=turn;
-    if (atr[col1][0] === turn1 && atr[col1][1] === turn1 && atr[col1][0] === turn1){
-        winner=turn1;
-    }
-    else if (atr[0][row1] === turn1 && atr[1][row1] === turn1 && atr[2][row1] === turn1){
-        winner=turn1;
-    }
-    else if((atr[0][0]===turn1&&atr[1][1]===turn1&&atr[2][2])||(atr[0][2]===turn1&&atr[1][1]===turn1&&atr[2][0]===turn1)){
-        winner=turn1;
-    }
-    return winner;
-}
+
 
 function reset(){
     let reset = document.createElement('button');
@@ -48,6 +34,10 @@ function reset(){
     })
 }
 
+function callBackFunc(e){
+
+}
+
 for(let i=0;i<3;i++){
     let trow = document.createElement('tr');
     at.push(trow);
@@ -60,8 +50,8 @@ for(let i=0;i<3;i++){
         td.style.textAlign='center';
         td.style.fontSize='35px';
         td.addEventListener('click',async(e)=>{
-            col=at.indexOf(e.target.parentNode)
-            row=atr[col].indexOf(e.target)
+            col=at.indexOf(e.target.parentNode)//trow의 인덱스반환[]
+            row=atr[col].indexOf(e.target)//atr[col]의 인덱스반환 [[x,x,x],[],[]]
            if (atr[col][row].textContent ==="") {
                    if (cnt === 8) {
                        alert('무승부');
